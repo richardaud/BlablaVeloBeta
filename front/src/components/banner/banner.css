@@ -1,0 +1,71 @@
+.container__banner {
+    display: grid;
+    grid-template-columns: auto auto auto auto ;
+
+margin-top: 90px;
+}
+
+.banner {
+    font-size: 60px;
+    font-weight: 500;
+    margin: 40px;
+}
+
+.img__velo {
+    height: 500px;
+    border-radius: 20px;
+    margin: 40px;
+}
+
+.description__banner {
+    font-size: 40px;
+    color: black;
+    margin: 40px;
+}
+
+.container__button {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    padding: 149px;
+    cursor: pointer;
+    background: #00cba9;
+    color: white;
+    border: 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;   
+    border-radius: 10px; 
+}
+
+@media (width < 500px) {
+    .container__banner{
+        grid-template-columns: none;
+        margin-top: 30px;
+        max-width: 390px;
+    }
+    .banner {
+      flex-direction: column;
+      justify-content: center;
+        font-size: 9px;
+        font-weight: 200;
+        margin: 0;
+    
+    }
+    .description__banner {
+        font-size: 9px;
+        font-weight: 200;
+        margin: 0;   
+     }
+    .img__velo {
+        height: 100px;
+        border-radius: 10px;
+        margin: 0;
+    }
+    .button {
+        padding: 10px;
+        font-size: 10px
+    }
+  }
