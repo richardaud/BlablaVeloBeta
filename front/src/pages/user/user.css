@@ -36,11 +36,15 @@
   @media screen and (max-width: 600px){
     .img__trajet{
         display: flex;
-        position:unset ;
         margin-top: 40px;
-        height: 200px;
-        width: 100px;
+        margin-left: 40px;
+        position: inherit;
       }
+      .img__trajet img {
+        width: 350px;
+        height: 190px;
+      }
+    
     
     
   }

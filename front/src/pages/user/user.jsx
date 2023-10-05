@@ -59,9 +59,9 @@
         <input type="file" ref={fileInputRef} onChange={handleFileInputChange} multiple />
         <button onClick={handleUploadClick}>Télécharger des documents</button>
       
-      <div className='img__trajet'>      <img src={trajet} alt="Profil" />
+  </div>      <div className='img__trajet'>      <img src={trajet} alt="Profil" />
   </div>
-  </div></>
+</>
     );
   }
 

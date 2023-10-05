@@ -49,20 +49,17 @@ margin-top: 90px;
     .banner {
       flex-direction: column;
       justify-content: center;
-        font-size: 9px;
-        font-weight: 200;
-        margin: 0;
+        font-size: 15px;
     
     }
     .description__banner {
-        font-size: 9px;
+        font-size: 15px;
         font-weight: 200;
-        margin: 0;   
+        max-width: 390px;
      }
     .img__velo {
-        height: 100px;
+        height: 200px;
         border-radius: 10px;
-        margin: 0;
     }
     .button {
         padding: 10px;
