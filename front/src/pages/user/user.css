@@ -21,8 +21,26 @@
     margin:  50px 0 30px 0;
   }
 
+  .img__trajet{
+    display: flex;
+    position: absolute;
+    left: 40%;
+    height: 400px;
+    margin-top: 40px;
+  }
+
+  .img__trajet img {
+    border-radius: 20px;
+  }
 
   @media screen and (max-width: 600px){
-
+    .img__trajet{
+        display: flex;
+        position:unset ;
+        margin-top: 40px;
+        height: 200px;
+        width: 100px;
+      }
+    
     
   }
