@@ -18,7 +18,7 @@ console.log('Mot de passe:', motDePasse);
 return (
 <div className='log'>
     <div className="login">
-        <h1 className='title__sign'>Bienvenue chez nous</h1>
+        <h1 className='title__sign'>Bienvenue chez nous vous</h1>
         <form className="login-form" onSubmit={handleSubmit}>
             <input type="text" placeholder="Entrez votre prénom" value={prenom} onChange={(e)=>
             setPrenom(e.target.value)}

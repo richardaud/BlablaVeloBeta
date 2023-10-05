@@ -35,7 +35,7 @@ function Sign() {
         <form className="login-form" onSubmit={handleSubmit}>
           <input
             type="text"
-            placeholder="Entrez votre prénom"
+            placeholder="Entrez votre prénom non"
             value={prenom}
             onChange={(e) => setPrenom(e.target.value)}
             required
