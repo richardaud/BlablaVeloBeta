@@ -1,0 +1,82 @@
+<html>
+<link rel="stylesheet" href="style_toast.css" <body>
+<button id="showBtn">Show</button>
+<button id="hideBtn">Hide</button>
+
+<div class="toast" id="toast">
+    <div class="toast-body">
+        ENFANT BIEN ARRIVER
+    </div>
+</div>
+</body>
+<script>
+
+
+
+
+
+    function calculDistance(lat1, lon1, lat2, lon2) {
+        var R = 6371; //radius terre
+        var dLat = deg2rad(lat2 - lat1);  // deg2rad below
+        var dLon = deg2rad(lon2 - lon1);
+        var a =
+            Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+            Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+            Math.sin(dLon / 2) * Math.sin(dLon / 2)
+            ;
+        var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        var d = (R * c) * 1000;
+        return d;
+    }
+
+    function deg2rad(deg) {
+        return deg * (Math.PI / 180)
+    }
+
+
+    //fin//
+
+
+    console.log(calculDistance(43.6388114515944, 3.810421496481896, 43.63930749889027, 3.8100641876746026));
+
+
+
+    const toast = document.getElementById('toast');
+    //style pour toast
+    /* .toast {
+         position: fixed;
+         bottom: 0;
+         right: 0;
+         transform: translateY(100 %);
+         opacity: 0;
+         transition: opacity 500ms, transform 500ms;
+     }
+ 
+     .toast.visible {
+         transform: translateY(0);
+         opacity: 1;
+     }
+     */
+
+
+    //a chaque actualisation gps faire fonction calcul distance avec condition si a moins de 50 metres faire 
+    // toast.classList.add('visible');
+
+
+    //condition clique sur croix en haut du toast 
+    // toast.classList.remove('visible');
+
+
+
+
+
+    document.getElementById('showBtn').addEventListener('click', function () {
+        // toast.querySelector('.toast-body').innerHTML = "Toast notification is working ...";
+        toast.classList.add('visible');
+    });
+    document.getElementById('hideBtn').addEventListener('click', function () {
+        toast.classList.remove('visible');
+    });
+</script>
+
+</html>
