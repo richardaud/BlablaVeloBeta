@@ -40,8 +40,8 @@
         <h2>Marion Dupuis</h2>
         <div>Enfants :</div>
         <ul>
-          {enfants.map((enfant, index) => (
-            <li key={index}>{enfant}</li>
+          {enfants.map((enfant, id) => (
+            <li key={id}>{enfant}</li>
           ))}
         </ul>
         <div>
