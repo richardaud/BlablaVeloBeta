@@ -1,0 +1,50 @@
+.container__user{
+    margin: 40px;
+    box-shadow:  1px 3px rgba(171, 167, 167, 0.029), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 360px;
+    height: auto;
+    place-items: center;
+    line-height: 30px;
+}
+
+.container__user > img {
+    width: 150px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+    justify-self: center;
+    margin:  50px 0 30px 0;
+  }
+
+  .img__trajet{
+    display: flex;
+    position: absolute;
+    left: 40%;
+    top: 20%;
+    height: 400px;
+    margin-top: 40px;
+  }
+
+  .img__trajet img {
+    border-radius: 20px;
+  }
+
+  @media screen and (max-width: 600px){
+    .img__trajet{
+        display: flex;
+        margin-top: 40px;
+        margin-left: 40px;
+        position: inherit;
+      }
+      .img__trajet img {
+        width: 350px;
+        height: 190px;
+      }
+    
+    
+    
+  }
