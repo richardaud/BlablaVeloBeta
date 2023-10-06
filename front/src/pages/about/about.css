@@ -15,6 +15,28 @@
 
 }
 
+.about__funding{
+    width: 350px;
+    height: 650px;
+    display: grid;
+    margin: 30px;
+    box-shadow:  1px 3px rgba(171, 167, 167, 0.029), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 20px;
+    text-align: center;
+}
+.about__funding h1 {
+    display: flex;
+    justify-self: center;
+    margin-top: 30px;
+}
+
+.about__funding > img{
+    width: 150px;
+    justify-self: center;
+}
+
+
+
 .about__card h1 {
     display: flex;
     justify-self: center;
