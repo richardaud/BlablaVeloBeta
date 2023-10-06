@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import './sign.css';
+import { db } from "./fireBase";
+import { uid } from "uid";
+import { set, ref, onValue, remove, update } from "firebase/database";
+
+import { useEffect } from "react";
 
 function Sign() {
   const [prenom, setPrenom] = useState('');
@@ -27,6 +32,29 @@ function Sign() {
       console.log('Mot de passe:', motDePasse);
     }
   };
+
+  const handleTodoChange = (e) => {
+    setTodo(e.target.value);
+  };
+
+  const writeToDatabase = () => {
+    if(motDePasse==motDePasseConfirmation){
+    const uuid = uid();
+    set(ref(db, `/${uuid}`), {
+      uuid,
+      nom,
+      prenom,
+      motDePasse
+    });
+
+    setNom("");
+    setPrenom("");
+    setMotDePasse("");
+    setMotDePasseConfirmation("");
+  };
+  };
+
+
 
   return (
     <div className='log'>
@@ -62,7 +90,7 @@ function Sign() {
             required
           />
           {erreurMotDePasse && <p className="erreur">{erreurMotDePasse}</p>}
-          <button type="submit">S'INSCRIRE</button>
+          <button onClick={writeToDatabase}>S'INSCRIRE</button>
         </form>
       </div>
     </div>
